@@ -1,0 +1,21 @@
+name: Run code analysis
+
+on:
+  push:
+  pull-request:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Run analyze.py
+        run: python analyze.py
