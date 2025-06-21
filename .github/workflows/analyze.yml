@@ -2,7 +2,7 @@ name: Run code analysis
 
 on:
   push:
-  pull-request:
+  pull_request:
 
 jobs:
   analyze:
